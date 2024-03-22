@@ -21,8 +21,8 @@ class TrainSeeder extends Seeder
         $train->azienda = $faker->company();
         $train->stazione_partenza = $faker->city();
         $train->stazione_arrivo = $faker->city();
-        $train->orario_partenza = $faker->date();
-        $train->orario_arrivo = $faker->date();
+        $train->orario_partenza = $faker->date() . " " . $faker->time();
+        $train->orario_arrivo = $faker->date() . " " . $faker->time();
         $train->codice_treno = $faker->randomNumber(5, true);
         $train->numero_carrozze = $faker->numberBetween(3, 20);
         $train->in_orario = 1;
